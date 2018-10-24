@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load staticfiles %}
+		
+	<div class="container">
+			<div class="col-md-12 col-sm-6">
+				<div class="default-padding default-margin-bottom white-bg box-shadow">
+					<div class="row">
+						<div class="col-md-5 col-sm-6">
+							<img src="{{announcement.Icon.url}}" alt="" class="img-fluid ann-img">
+						</div>
+						<div class="col-md-7 col-sm-6">
+							<h3 class="bold dark-blue text-uppercase default-padding-top">{{announcement.Title}}</h3>
+							<p class=" grey-color italic-style">Posted on: {{announcement.Date}}</p>
+							<p class=" grey-color italic-style">Posted by: {{announcement.Name}}</p>
+						</div>
+					</div>
+					<p class="default-padding-top">{{announcement.Announcement}}</p>
+					<h5 class="default-padding-top">Announcer contacts:</h5>
+					<p class="bolder italic-style">Phoner number: {{announcement.Phone}}</p>
+					<p class="bolder italic-style">E-mail address: {{announcement.Email}}</p>
+				</div>
+			</div>
+	</div>
+
+{% endblock %}
+		

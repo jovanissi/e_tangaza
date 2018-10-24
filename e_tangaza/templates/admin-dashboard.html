@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load staticfiles %}
+		
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-md-9 col-sm-6">
+			{% for announcement in pending_announcements %}
+				<div class="announcement-block white-bg box-shadow">
+					<div class="row">
+						<div class="col-md-2 col-sm-6">
+							<img src="{{announcement.Icon.url}}" alt="" class="img-fluid default-margin-bottom">
+						</div>
+							<div class="col-md-10 col-sm-6">
+							<p class="bold dark-blue text-uppercase">{{announcement.Title}}</p>
+							<p class="text-dark text-small-size line-clamp">{{announcement.Announcement}}</p>
+							<p class="text-smaller-size grey-color italic-style">Posted on: {{announcement.Date}}</p>
+							<div class="row">
+								<div class="col-md-7">
+									<a href="admin_{{announcement.id}}"><button type="submit" class="btn transparent no-border-radius border-width border-dark default-margin-Top text-smaller-size">More details</button></a>
+								</div>
+								<!-- <div class="col-md-5">
+									<div class="row">
+										<div class="col-md-6">
+											<form action="approve" method="POST">{% csrf_token %}
+												<input type="hidden" value="{{announcement.id}}" name="id">
+												<button type="submit" class="btn btn-success btn-lg no-border-radius text-smaller-size">APPROVE</button>
+											</form>
+										</div>
+										<div class="col-md-6">
+											<form action="reject" method="POST">{% csrf_token %}
+												<input type="hidden" value="{{announcement.id}}" name="id">
+												<button type="submit" class="btn btn-danger btn-lg no-border-radius text-smaller-size no-box-glow text-light">REJECT</button>
+											</form>
+										</div>
+									</div>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+				
+			</div>
+			<div class="col-md-1 offset-md-1">
+				<a href="logout"><button type="submit" class="btn transparent no-border-radius border-width border-dark text-small-size right-float logout-btn default-margin-bottom">LOGOUT</button></a>
+			</div>
+			<div class="col-md-1">
+				<!-- <form action="approve" method="POST">{% csrf_token %}
+					<input type="hidden" value="{{announcement.id}}" name="id">
+					<button type="submit" class="btn btn-success btn-lg no-border-radius text-smaller-size default-margin-bottom">APPROVE</button>
+				</form> -->
+				<button type="submit" class="btn btn-success btn-lg no-border-radius text-smaller-size default-margin-bottom" data-toggle="modal" data-target="#myModal">APPROVE</button>
+			</div>
+		</div>
+
+	<!-- Approving modal -->
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content white-bg default-padding">
+				<form action="approve" method="POST">{% csrf_token %}
+					<div class="form-group">
+						<label class="text-dark bold text-small-size">Enter announcement ID</label>
+						<input type="text" class="form-control no-border-radius border-black text-small-size no-box-glow text-dark" placeholder="Announcement ID" name="id" required>
+					</div>
+					<button type="submit" class="btn btn-outline-dark transparent form-control no-border-radius border-dark no-box-glow default-margin-bottom text-small-size">APPROVE</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+{% endblock %}
+
+		

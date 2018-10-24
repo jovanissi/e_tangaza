@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<title>e-Tangaza</title>
+
+		{% load staticfiles%}
+
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	</head>
+	<body>
+		
+		<nav class="navbar navbar-expand-sm navbar-dark bg-darker">
+			<a class="navbar-brand link-0" href="home"><img src="{% static 'img/logo1.jpg' %}" alt="" class="icon-img"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav right-float">
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="lost-items" class="nav-link">Lost</a></li>
+					<li class="nav-item"><a href="found-items" class="nav-link">Found</a></li>
+					<li class="nav-item"><a href="on-sale-items" class="nav-link">On Sale</a></li>
+					<li class="nav-item"><a href="events" class="nav-link">Events</a></li>
+					<li class="nav-item"><a href="jobs" class="nav-link">Jobs</a></li>
+					<li class="nav-item"><a href="advertisements" class="nav-link">Advertisements</a></li>
+					<li class="nav-item"><a href="other-announcements" class="nav-link">Announcements</a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+				</ul>
+				<a href="postAnnouncementPage"><button class="btn transparent no-border-radius border-width border-light white text-small-size right-float post-ann-button">Post announcement</button></a>
+			</div>
+		</nav>
+		
+		{% block content %}
+		{% endblock %}
+
+		<footer class="footer the-footer bg-darker">
+			<div class="container">
+				<p class="centered-text text-light default-padding-bottom footer-last-text">Powered by e-Tangaza Ltd</p>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+	</body>
+</html>

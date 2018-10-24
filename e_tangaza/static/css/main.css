@@ -1,0 +1,257 @@
+h1,h2,h3,h4,h5,h6{
+	text-transform: uppercase;
+	font-weight: normal !important;
+	font-family: 'Lato', sans-serif;
+}
+
+p{
+	font-family: 'Lato', sans-serif;
+}
+
+body, html{
+	height: 100%;
+}
+
+.container{
+	position: relative;
+	padding-top: 80px;
+}
+
+.container2{
+	position: relative;
+	padding-top: 150px;
+}
+
+.navbar{
+	/*background: rgba(0, 45, 104);*/
+	min-height: 70px;
+	z-index: 999;
+	position: fixed;
+	width: 100%;
+}
+
+.upper-nav-div{
+	min-height: 70px;
+	z-index: 999;
+	position: fixed;
+	width: 100%;
+	top: 70px;
+}
+
+.search-button:hover{
+	-webkit-box-shadow: none;
+	font-size: 12px;
+	color: #002d68;
+	background-color: #fff;
+	border-color: #002d68;
+}
+
+.icon-img{
+	max-height: 45px;
+}
+
+.carousel-fade .carousel-inner .carousel-item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+.carousel-fade .carousel-inner .carousel-item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control-prev {
+    z-index: 2;
+}
+.carousel-fade .carousel-control-next {
+    z-index: 2;
+}
+.white{
+	color: #fff;
+}
+.black{
+	color: #000;
+}
+.grey-color{
+	color: #aaa;
+}
+.bg-dark{
+	background-color: rgba(0,0,0,0.8);
+}
+.bg-darker{
+	background-color: rgba(0,0,0,0.9);
+}
+.dark-blue{
+	color: #002d68;
+}
+.dark-blue-bg{
+	background-color: #002d68;
+}
+.dark-blue-bg-trans{
+	background-color: rgba(0, 45, 104, 0.7);
+}
+.white-bg{
+	background-color: #fff;
+}
+.box-shadow{
+	z-index: 999;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+.no-box-glow{
+	-webkit-box-shadow: none !important;
+}
+.bold{
+	font-weight: bold;
+}
+.bolder{
+	font-weight: bolder;
+}
+.text-small-size{
+	font-size: 14px;
+}
+.text-smaller-size{
+	font-size: 12px;
+}
+.text-uppercase{
+	text-transform: uppercase;
+}
+.no-text-transformation{
+	text-transform: none;
+}
+.default-margin-left{
+	margin-left:15px
+}
+.default-margin-Top{
+	margin-top:15px !important;
+}
+.default-margin-right{
+	margin-right: 15px;
+}
+.default-margin-bottom{
+	margin-bottom: 15px;
+}
+.default-padding-top{
+	padding-top: 30px;
+}
+.default-padding-bottom{
+	padding-bottom: 30px;
+}
+.default-padding{
+	padding: 15px;
+}
+.no-border-radius{
+	border-radius: 0;
+	-webkit-box-shadow: none;
+}
+.border-width{
+	border-width: 1px;
+	-webkit-box-shadow: none;
+}
+.transparent{
+	background: transparent;
+}
+.border-white{
+	border-color: #fff; 
+}
+.border-black{
+	border-color: #000; 
+}
+.border-dark{
+	border-color: rgba(0,0,0,0.8);
+}
+.border-light{
+	border-color: rgba(255,255,255,0.7);
+}
+.right-float{
+	float: right;
+}
+.center-float{
+	float: center;
+}
+.italic-style{
+	font-style: italic;
+}
+.centered-text{
+	text-align: center;
+}
+
+.post-ann-button:hover{
+	-webkit-box-shadow: none;
+	font-size: 14px;
+	color: #002d68;
+	background-color: #fff;
+	border-color: #002d68;
+}
+
+.announcement-block{
+	padding: 20px;
+	margin-bottom: 15px;
+}
+.announcement-block img{
+	height: 100px;
+	width: 100px;
+}
+.ann-words-cont{
+	float: right;
+}
+
+.announcement-block button:hover{
+	-webkit-box-shadow: none;
+	font-size: 12px;
+	color: #fff;
+	background-color: #002d68;
+	border-color: #fff;
+}
+
+.footer-border{
+	border-top: 0.5px solid rgba(255,255,255,0.8);
+  	border-height: 0.5px;
+  	border-width: 1px;
+  	margin: 15px auto 0;
+  	position: relative;
+  	width: 100%;
+  	padding-bottom: 30px;
+}
+
+.the-footer{
+	margin-bottom: -20px;
+}
+
+.footer-last-text{
+	margin-bottom: -20px;
+	padding-bottom: 20px;
+}
+
+.det-ann-img{
+	
+}
+
+.line-clamp{
+	/*display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;*/
+	display: block;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	overflow: hidden;
+	max-height: 3.6em;
+	line-height: 1.8em;
+}
+
+.logout-btn:hover{
+	color: #fff;
+	background-color: #002d68;
+	border-color: #002d68;
+}

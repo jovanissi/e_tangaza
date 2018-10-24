@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load staticfiles %}
+		<div class="bg-darker upper-nav-div">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8 col-sm-6">
+					<form action="search" method="GET">
+						<div class="row">
+							<div class="col-md-9 ">
+								<div class="form-group">
+									<input type="text" class="form-control no-border-radius border-black text-small-size no-box-glow text-dark default-margin-Top" placeholder="Search for announcement..." name="words" required>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<button type="submit" class="btn btn-lg transparent no-border-radius border-width border-dark text-smaller-size default-margin-Top default-margin-bottom search-button white">SEARCH</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<div class="container container2">
+			<div class="row">
+				<!-- <div class="col-md-1"></div> -->
+				
+				{% for announcement in all_announcements %}
+				<div class="col-md-6 col-sm-6">
+				
+	 				<div class="announcement-block white-bg box-shadow">
+	 					<div class="row">
+	 						<div class="col-md-2 col-sm-6">
+	 							<img src="{{announcement.Icon.url}}" alt="Image" class="img-fluid default-margin-bottom">
+	 						</div>
+	 						<div class="col-md-10 col-sm-6">
+	 							<p class="bold dark-blue text-uppercase">{{announcement.Title}}</p>
+								<p class="text-dark text-small-size line-clamp">{{announcement.Announcement}}</p>
+								<p class="text-smaller-size grey-color italic-style">Posted on: {{announcement.Date}}</p>
+								<a href="{{announcement.id}}"><button type="submit" class="btn transparent no-border-radius border-width border-dark default-margin-Top text-smaller-size">More details</button></a>
+	 						</div>
+	 					</div>
+	 				</div>
+	 			</div>
+
+	 			{% endfor %}
+			</div>
+		</div>
+
+		{% if success %}
+			<script type="text/javascript">
+				alert("You have successfully sent an announcement. \n")
+			</script>
+		{% endif %}
+
+{% endblock %}

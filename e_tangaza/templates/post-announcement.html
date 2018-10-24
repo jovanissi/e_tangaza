@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load staticfiles %}
+		
+	<div class="container">
+			<div class=" col-md-8 col-sm-6">
+			<div class="default-padding default-margin-bottom box-shadow">
+				<h5 class="dark-blue">Post new announcement</h5>
+
+				<form action="post-new-announcement" method='POST' enctype="multipart/form-data"> 
+					{% csrf_token %}
+					<div class="form default-padding-top">
+						<div class="form-group">
+							<label class="text-dark bold text-small-size">Enter your name</label>
+							<input type="text" class="form-control no-border-radius border-black text-small-size no-box-glow text-dark" placeholder="Name" name="name" required>
+						</div>
+						<div class="form-group">
+							<label class="text-dark bold text-small-size">Enter your phone number</label>
+							<input type="text" class="form-control no-border-radius border-black text-small-size no-box-glow text-dark" placeholder="Phone" name="phone" required>
+						</div>
+						<div class="form-group">
+							<label class="text-dark bold text-small-size">Enter your E-mail</label>
+							<input type="email" class="form-control no-border-radius border-black text-small-size no-box-glow text-dark" placeholder="E-mail" name="email">
+						</div>
+						<div class="form-group">
+							<label for="property-type" class="text-dark bold text-small-size">Announcement category</label>
+							<select class="form-control no-border-radius border-black text-small-size no-box-glow text-dark" id="" name="category">
+								<option value="announcement">Announcement</option>
+								<option value="lost">Lost</option>
+								<option value="found">Found</option>
+								<option value="on_sale">On sale</option>
+								<option value="event">Event</option>
+								<option value="job">Job</option>
+								<option value="advertisement">Advertisement</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="text-dark bold text-small-size">Announcement title</label>
+							<input type="text" class="form-control no-border-radius border-black text-small-size no-box-glow text-dark" placeholder="Title" name="title">
+						</div>
+						<div class="form-group">
+							<label for="property-additional-note" class="text-dark bold text-small-size">Announcement</label>
+							<textarea name="announcement" id="" rows="5" class="form-control no-border-radius border-black text-small-size no-box-glow text-dark" 
+							required></textarea>
+						</div>
+						<div class="form-group">
+							<label class="text-dark bold text-small-size">Thumbnail picture (This is the presentation image)</label>
+							<input type="file" class="form-control no-border-radius text-small-size no-box-glow text-dark" id="" name="icon">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-outline-dark transparent form-control no-border-radius border-dark no-box-glow default-margin-bottom text-small-size">SUBMIT</button>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	{% if success %}
+		<script type="text/javascript">
+			alert("You have successfully sent an announcement.")
+		</script>
+	{% endif %}
+
+{% endblock %}
